@@ -7,6 +7,7 @@ script: cd docs && vercel --prod
 before_script:
   - echo before script
   - npm i -g vercel
+  - VERCEL_ORG_ID=$VERCEL_ORG_ID VERCEL_PROJECT_ID=$VERCEL_PROJECT_ID vercel
   - vercel --prod --token $TRAVIS_CI
 
 after_script:
