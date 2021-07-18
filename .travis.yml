@@ -2,13 +2,12 @@ language: node_js
 
 node_js: – 16.0.0
 
-script: cd docs && vercel --prod
+script: cd docs && vercel --prod --token $TRAVIS_CI
 
 before_script:
   - echo before script
   - npm i -g vercel
   - VERCEL_ORG_ID=$VERCEL_ORG_ID VERCEL_PROJECT_ID=$VERCEL_PROJECT_ID vercel --token $TRAVIS_CI
-  - vercel --prod --token $TRAVIS_CI
 
 after_script:
   - echo after script
