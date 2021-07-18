@@ -4,7 +4,9 @@ node_js: – 16.0.0
 
 script: cd docs && vercel --prod
 
-before_script: echo before script
+before_script:
+  - echo before script
+  - npm i -g vercel
 after_script:
   - echo after script
   - echo yeah! success!
