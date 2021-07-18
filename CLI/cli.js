@@ -7,9 +7,7 @@ const program = new Command();
 program.option("-t, --tags [tags...]");
 program.parse();
 
-const search = Array.isArray(program.args)
-  ? program.args.join(" ")
-  : program.args;
+const search = Array.isArray(program.args) ? program.args.join(" ") : prog;
 console.log(search.toString());
 const tags = program.opts().tags;
 
