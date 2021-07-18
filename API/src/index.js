@@ -63,7 +63,7 @@ const resolvers = {
   Query: {
     hello: () => "Hello World",
     getQuestion: async (_, { intitle, tags }) => {
-      console.log(tags);
+      // console.log(tags);
       const req = await (
         await fetch(
           `https://api.stackexchange.com/2.3/search?page=1&pagesize=10&order=desc&sort=relevance&tagged=${

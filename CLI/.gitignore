@@ -1,5 +1,6 @@
 node_modules/
 x.json
+interactivecli.js
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
