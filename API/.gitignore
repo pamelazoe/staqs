@@ -1,4 +1,6 @@
 node_modules/
+test.js
+test2.js
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
