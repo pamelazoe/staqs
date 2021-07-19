@@ -33,7 +33,19 @@ You need to submit your working code in github, including (depending on your pro
     identify the features, bugs, PR’s you plan on contributing to Open Source
     describe the learning objective for a problem set and provide a the design -->
 
-### Setup & Instalation
+### Setup & Installation
+
+#### StackApps key
+
+For this project, we will be using StackExchange's API, which is StackOverflow and StackApp's parent company.
+StackOverflow's unauthenticated endpoint allows only 300 hits per day, and to bypass this quota issue we will need a key.
+This will give us 10,000 hits per IP,x per day.
+To register a new application, go to https://stackapps.com/apps/oauth/register and register or login with Facebook, Google or email and password.
+
+Fill in the form making sure that OAuth Domain and Application Website are set to localhost and that Enable Client Side OAuth Flow and Disable Desktop Application OAuth Redirect Uri boxes are not ticked.
+Submit your changes and copy or store the generated key because we will need it later.
+
+#### Installation
 
 ```terminal
 git clone https://github.com/pamelazoe/staq.git
@@ -51,11 +63,26 @@ npm run postinstall
 cd API && echo "STACKOVERFLOW_KEY=" > .env && npm start
 ```
 
-Authenticate/Login into https://stackapps.com/ and click on "Register For An App Key"
-Fill in the form making sure that OAuth Domain and Application Website are set to localhost and that Enable Client Side OAuth Flow and Disable Desktop Application OAuth Redirect Uri boxes are not ticked.
-Submit your changes and copy the generated key.
-Paste it into the .env file at the root of the CLI folder.
+Link
+
+```terminal
+cd CLI && npm link
+```
+
+Unlink
+
+```terminal
+npm unlink -g
+```
 
 ### Usage
+
+```terminal
+staq <"Error/Query to search"> [--tags]
+```
+
+```terminal
+staq "reference error" -t javascript
+```
 
 ### Process
