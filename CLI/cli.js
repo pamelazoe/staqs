@@ -3,7 +3,6 @@ const { getQuestion } = require("./src/graphql/query");
 const inquirer = require("inquirer");
 const chalk = require("chalk");
 const stripAnsi = require("strip-ansi");
-const { interactiveCLI } = require("./interactivecli");
 const TerminalRenderer = require("marked-terminal");
 const marked = require("marked");
 marked.setOptions({
@@ -45,7 +44,6 @@ if (search.length <= 0) {
       console.log("There are no results for this search");
       process.exit();
     }
-    // interactiveCLI(obj);
     inquirer
       .prompt([
         {
