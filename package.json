@@ -7,7 +7,7 @@
         "doc": "docs"
     },
     "scripts": {
-        "postinstall": "(cd API && npm install && nodemon src/index.js); (cd CLI && npm install); (cd docs && npm install)"
+        "postinstall": "(cd API && npm install); (cd CLI && npm install); (cd docs && npm install)"
     },
     "repository": {
         "type": "git",
