@@ -1,0 +1,22 @@
+{
+    "name": "staq",
+    "version": "1.0.0",
+    "description": "[![Build Status](https://travis-ci.com/pamelazoe/staq.svg?branch=develop)](https://travis-ci.com/pamelazoe/staq)",
+    "main": "index.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "scripts": {
+        "postinstall": "(cd API && npm install && nodemon src/index.js); (cd CLI && npm install); (cd docs && npm install)"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pamelazoe/staq.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/pamelazoe/staq/issues"
+    },
+    "homepage": "https://github.com/pamelazoe/staq#readme"
+}
