@@ -2,7 +2,6 @@
 const { getQuestion } = require("./src/graphql/query");
 const inquirer = require("inquirer");
 const chalk = require("chalk");
-const terminalLink = require("terminal-link");
 const stripAnsi = require("strip-ansi");
 const TerminalRenderer = require("marked-terminal");
 const marked = require("marked");
@@ -43,9 +42,9 @@ getQuestion({ intitle: search.toString(), tags }).then(async (data) => {
       {
         type: "rawlist",
         name: "question",
-        message: "Choose one of this questions",
+        message: "Select one of this questions\n\n",
         choices: await obj.map(
-          (x) => `${x.question_id} ${chalk.green.bold(x.title)}`
+          (x) => `${x.question_id} ${chalk.green.bold(x.title)}\n`
         ),
       },
     ])
@@ -56,16 +55,29 @@ getQuestion({ intitle: search.toString(), tags }).then(async (data) => {
       // console.log(answers);
       const w = await res.map((el) => {
         console.log(
-          `${chalk.bold(`Question link`)}: ${terminalLink(
-            "Link",
-            chalk.blueBright(el.link)
-          )}`
+          `${chalk.bold(`Question link`)}: ${
+            ("Link", chalk.blueBright(el.link))
+          }`
         );
-        console.log(`${marked(el.body_markdown)}============================`);
+        console.log(`${marked(el.body_markdown)}`);
         const top_answers = el.answers
           .sort((a, b) => b.score - a.score)
           .slice(0, 3);
-        console.log(top_answers);
+        // console.log(top_answers);
+        const results = top_answers.map((ans, i) =>
+          console.log(
+            `${
+              ans.is_accepted === true
+                ? `========================\n${chalk.yellow.inverse(
+                    `   ${++i}. ACCEPTED ANSWER   `
+                  )}\n========================`
+                : `==============\n${chalk.blue.inverse(
+                    `   ANSWER ${++i}   `
+                  )}\n==============`
+            }\n${ans.link}\n${marked(ans.body_markdown)}`
+          )
+        );
+        return results;
       });
     });
 });
