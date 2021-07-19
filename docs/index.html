@@ -16,11 +16,26 @@
         window.$docsify = {
             name: "staQ's",
             repo: "https://github.com/pamelazoe/staq",
-            coverpage: true,
+            themeColor: "#EE9A96",
+            noEmoji: false,
+            mergeNavbar: false,
+            search: "auto", // default
+
+            // complete configuration parameters
+            search: {
+                maxAge: 86400000, // Expiration time, the default one day
+                paths: "auto",
+                placeholder: "Type to search",
+                noData: "No Results!",
+                // Headline depth, 1 - 6
+                depth: 6,
+                hideOtherSidebarContent: false, // whether or not to hide other sidebar content
+            },
         };
     </script>
     <!-- Docsify v4 -->
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 </body>
 
 </html>
