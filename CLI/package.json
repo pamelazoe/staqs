@@ -12,10 +12,13 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "chalk": "^4.1.1",
         "commander": "^8.0.0",
+        "hermit": "^0.2.2",
         "inquirer": "^8.1.2",
         "marked": "^2.1.3",
         "marked-terminal": "^4.1.1",
-        "node-fetch": "^2.6.1"
+        "node-fetch": "^2.6.1",
+        "strip-ansi": "^6.0.0"
     }
 }

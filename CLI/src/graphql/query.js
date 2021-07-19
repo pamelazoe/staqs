@@ -8,6 +8,30 @@ const query = `query
       link
       body
       body_markdown
+      question_id
+      is_answered
+      answers{
+        owner {
+          account_id
+          reputation
+          user_id
+          user_type
+          profile_image
+          display_name
+          link
+        }
+        is_accepted
+        score
+        last_activity_date
+        last_edit_date
+        creation_date
+        answer_id
+        question_id
+        content_license
+        link
+        body_markdown
+        body
+      }
     }
 }`;
 // const variables = {

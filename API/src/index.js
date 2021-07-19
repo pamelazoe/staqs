@@ -33,29 +33,30 @@ const typeDefs = gql`
     title: String!
     body: String!
     body_markdown: String!
+    answers: [Answer]
   }
   type Owner {
-    account_id: Int!
-    reputation: Int!
-    user_id: Int!
-    user_type: String!
-    accept_rate: Int
-    profile_image: String!
-    display_name: String!
-    link: String!
+    account_id: Int
+    reputation: Int
+    user_id: Int
+    user_type: String
+    profile_image: String
+    display_name: String
+    link: String
   }
   type Answer {
     owner: Owner
-    is_accepted: Boolean!
-    score: Int!
-    last_activity_date: Int!
-    last_edit_date: Int!
-    creation_date: Int!
-    answer_id: Int!
-    question_id: Int!
-    content_license: Int!
-    body_markdown: String!
-    body: String!
+    is_accepted: Boolean
+    score: Int
+    last_activity_date: Int
+    last_edit_date: Int
+    creation_date: Int
+    answer_id: Int
+    question_id: Int
+    content_license: String
+    link: String
+    body_markdown: String
+    body: String
   }
 `;
 
