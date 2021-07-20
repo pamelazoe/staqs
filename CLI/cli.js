@@ -61,9 +61,7 @@ if (search.length <= 0) {
         const res = await obj.filter((el) => el.question_id === +q_id);
         // console.log(answers);
         const w = await res.map((el) => {
-          console.log(
-            `${chalk.bold(`Question link`)}: ${chalk.blueBright(el.link)}\n`
-          );
+          console.log(`${chalk.blueBright(el.link)}\n`);
           console.log(`${marked(el.body_markdown)}`);
           const top_answers = el.answers
             .sort((a, b) => b.score - a.score)

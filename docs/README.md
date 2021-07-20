@@ -17,9 +17,9 @@ But sometimes it's just annoying to change windows or workspaces to go to the br
 
 So... terminal + stackoverflow = GET THIS NASTY ERROR OUT OF MY WAY.
 
-This is not a new concept and has been implemented before by libraries like how2, but I wanted to take a dabble on it and see how far I could go. Spoiler alert: not very far <img height="15" src="https://emoji.slack-edge.com/T07S50KDX/crydog/91177cc893512efb.png"> Who would have thought that displaying a bunch of strings in a black canvas would be so difficult.
+### DISCLAIMER
 
-But enough of my whinning, lets get you to the setup part so you can try this master piecen't.
+This package it's still in a development state and it's not ready to be part of the npmjs registry.
 
 ### What does this package do?
 
@@ -31,6 +31,11 @@ After the question has been selected, the CLI returns:
 - The body of the question posted by the user
 - Top 3 most upvoted answers with their respective links
 - If one of the 3 answers is the accepted answer, it will be properly marked as "ACCEPTED ANSWER"
+- It returns an error and the help menu if no search argument has been provided
+
+This is not a new concept and has been implemented before by libraries like how2, but I wanted to take a dabble on it and see how far I could go. Spoiler alert: not very far <img height="15" src="https://emoji.slack-edge.com/T07S50KDX/crydog/91177cc893512efb.png"> Who would have thought that displaying a bunch of strings in a black canvas could be so difficult.
+
+But enough of my whinning, lets get you to the setup part so you can try this master piecen't.
 
 ### Setup & Installation
 
@@ -41,7 +46,7 @@ StackOverflow's unauthenticated endpoint allows only 300 hits per day, and to by
 This will give us 10,000 hits per IP, per day.
 To register a new application, go to https://stackapps.com/apps/oauth/register and register or login with Facebook, Google or email and password.
 
-Fill in the form making sure that OAuth Domain and Application Website are set to localhost and that Enable Client Side OAuth Flow and Disable Desktop Application OAuth Redirect Uri boxes are not ticked.
+Fill in the form and set OAuth Domain and Application Website are set to localhost and that Enable Client Side OAuth Flow and Disable Desktop Application OAuth Redirect Uri boxes are not ticked.
 Submit your changes and copy or store the generated key because we will need it later.
 
 <div style="text-align: center;">
@@ -69,8 +74,8 @@ This command will also start the API server.
 cd API && echo "STACKOVERFLOW_KEY=" > .env && npm start
 ```
 
-To use this package locally we need to link it to our local machine and this will simulate an installed package.
-Make sure you are located on the CLI folder for this.
+To use this package locally in a development environment we need to link it to our local machine and this will simulate an installed package.
+Make sure you are located on the CLI folder to run this command.
 
 ```terminal
 cd CLI && npm link
@@ -92,4 +97,4 @@ staq <"Error/Query to search"> [--tags]
 staq "reference error" -t javascript
 ```
 
-### Process
+### Stack
