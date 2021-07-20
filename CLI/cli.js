@@ -77,9 +77,7 @@ if (search.length <= 0) {
                   : `==============\n${chalk.blue.inverse(
                       `   ANSWER ${++i}   `
                     )}\n==============`
-              }\n${chalk.bold(`Question link`)} ${chalk.blueBright(
-                ans.link
-              )}\n${marked(ans.body_markdown)}`
+              }\n${chalk.blueBright(ans.link)}\n${marked(ans.body_markdown)}`
             )
           );
           return results;

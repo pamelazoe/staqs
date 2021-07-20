@@ -90,11 +90,13 @@ npm unlink -g
 ### Usage
 
 ```terminal
-staq <"Error/Query to search"> [--tags]
+staqs <"Error/Query to search"> [--tags]
 ```
 
 ```terminal
-staq "reference error" -t javascript
+staqs "reference error" -t javascript
 ```
 
 ### Stack
+
+### Trials and tribulations
