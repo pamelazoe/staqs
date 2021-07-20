@@ -17,6 +17,7 @@ program.option(
   "Add specific tags separated by an empty space"
 );
 program.parse();
+console.log(process.argv);
 
 const search = Array.isArray(program.args) ? program.args.join(" ") : prog;
 const tags = program.opts().tags;
