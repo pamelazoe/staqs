@@ -33,23 +33,22 @@ $ cd staq && npm run postinstall
 ```
 
 Create the .env file with this command and then paste the key we got earlier.
-This command will also start the API server.
+This command will also start the API server in the port 4000.
 
 ```terminal
 $ cd API && echo "STACKOVERFLOW_KEY=" > .env && npm start
 ```
 
-To use this package locally in a development environment we need to link it to our local machine and this will simulate an installed package.
-Make sure you are located on the CLI folder to run this command.
+To use this package locally in a development environment we need to link it to our local machine and this will simulate an installed package. Open a new terminal and make sure you are located on the CLI folder to run this command.
 
 ```terminal
 $ cd CLI && npm link
 ```
 
-To remove this package, get into the CLI folder and run
+If you want to remove this package from your machine, just run
 
 ```terminal
-$ npm unlink -g
+$ npm uninstall -g staqs
 ```
 
 ### Usage
