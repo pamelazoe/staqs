@@ -1,0 +1,12 @@
+.app-name-link>img:nth-child(1) {
+    width: 60%;
+}
+
+.markdown-section pre {
+    border-radius: 7px;
+}
+
+
+/* body {
+    font-family: "Poppins", sans-serif;
+} */

@@ -7,8 +7,8 @@
 I work with software and thereby, I'm a professional mistake maker. It means that to be able to make things work, I also have to be a professional web surfer on a very specific sphere: [Stackoverflow](https://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454).
 
 <div style="text-align: center;">
-<img style="margin:0 30px" src="https://programmercave0.github.io/assets/stackoverflow_memes/so_meme4.jpg" height="250">
-<img style="margin:0 30px" src="https://programmercave0.github.io/assets/stackoverflow_memes/so_meme8.jpg" height="250">
+<img style="margin:10px 30px" src="https://programmercave0.github.io/assets/stackoverflow_memes/so_meme4.jpg" height="250">
+<img style="margin:10px 30px" src="https://programmercave0.github.io/assets/stackoverflow_memes/so_meme8.jpg" height="250">
 </div>
 
 This website has saved me so many times, even before I had any contact with programming. And now that I'm a Developer this is one of my most used tools.
@@ -55,20 +55,26 @@ Submit your changes and copy or store the generated key because we will need it 
 
 ### Installation
 
-Clone the repository
+If you already cloned the repository in previous days, run this to retrieve the latest changes
 
 ```terminal
-$ git clone https://github.com/pamelazoe/staq.git
+$ git pull origin main
+```
+
+Otherwise, clone the repository
+
+```terminal
+$ git clone https://github.com/pamelazoe/staqs.git
 ```
 
 Run this command to get into the project and install both the CLI and the API
 
 ```terminal
-$ cd staq && npm run postinstall
+$ cd staqs && npm run dev
 ```
 
-Get into the API folder and create an .env file with this command.
-This command will also start the API server.
+Create the .env file with this command and then paste the key we got earlier.
+This command will also start the API server in the port 4000.
 
 ```terminal
 $ cd API && echo "STACKOVERFLOW_KEY=" > .env && npm start
@@ -80,10 +86,10 @@ This is the time to paste the key we got earlier from StackApps. The .env file s
 STACKOVERFLOW_KEY=xxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-To use this package locally in a development environment we need to link it to our local machine and this will simulate a globally installed package. Open a new terminal and make sure you are located on the CLI folder to run this command.
+To use this package locally in a development environment we need to link it to our local machine and this will simulate an installed package. Open a new terminal and make sure you are located on the CLI directory to run this command.
 
 ```terminal
-$ npm link
+$ cd CLI && npm link // or just npm link if you already are in the CLI directory
 ```
 
 #### How to remove this package
@@ -94,7 +100,7 @@ If you want to remove this package from your machine, just run
 $ npm uninstall -g staqs
 ```
 
-To verify that the package is gone, run this command and the library shouldn't be on the list.
+To verify that the package is gone, run this command and the package shouldn't be on the list.
 
 ```terminal
 $ npm list -g --depth 0
@@ -102,14 +108,26 @@ $ npm list -g --depth 0
 
 ### Usage
 
+This package expects at least one argument, which is a string or set of strings between quotation marks. For example:
+
 ```terminal
-$ staqs <"Error/Query to search"> [--tags]
+$ staqs "reference error" -t javascript
 ```
+
+#### Flags
+
+At the moment there is only one flag available.
+
+`--tags` or `-t` for short. It expects one or more strings and returns answers filtered with the specified flags. For example:
 
 ```terminal
 $ staqs "reference error" -t javascript
 ```
 
 ## Stack
+
+### Backend
+
+### CLI
 
 ## Trials and tribulations
