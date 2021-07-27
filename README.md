@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/pamelazoe/staq.svg?branch=develop)](https://travis-ci.com/pamelazoe/staq)
+[![Build Status](https://travis-ci.com/pamelazoe/staqs.svg?branch=main)](https://travis-ci.com/pamelazoe/staqs)
 
 [Documentation](https://staq-docs-pamelazoe.vercel.app)
 
